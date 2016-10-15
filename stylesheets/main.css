@@ -3,3 +3,10 @@
 body {
 	background: #ccc;
 }
+
+.man {
+	width:  300px;
+	height: 300px;
+	margin: auto;
+	border: 1px solid #000;
+}
