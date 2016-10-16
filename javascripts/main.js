@@ -22,6 +22,18 @@ var drawArc = function() {
 
 	ctx.stroke();
 
+	var hours = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12 , 1, 2];
+	hours.forEach(function(e, i){
+		var rad = 30 * 2 * Math.PI / 360 * i; //Math.PI*2/12*i;
+		var x = Math.cos(rad) * (r - 35), 
+	 		y = Math.sin(rad) * (r - 35);
+
+	 	ctx.font = '22px YaHei';	
+	 	ctx.textAlign = 'center';
+	 	ctx.textBaseLine = 'middle';
+	 	ctx.fillText(e, x, y);
+	});
+
 
 	for(var i = 0; i < 60; i ++) {
 		var rad = 6 * 2 * Math.PI / 360 * i; //Math.PI*2/12*i;
@@ -45,7 +57,7 @@ var drawHour = function(hour, minute) {
 	ctx.beginPath();
 	ctx.lineCap = 'round';
 	ctx.moveTo(0, 10);
-	ctx.lineTo(0, -(r - 60));
+	ctx.lineTo(0, -(r - 80));
  	ctx.strokeStyle = '#000';
  	ctx.stroke();
  	ctx.restore();
@@ -61,7 +73,7 @@ var drawMinute = function(minute) {
 	ctx.lineWidth = 7;
 	ctx.lineCap = 'round';
 	ctx.moveTo(0, 10);
-	ctx.lineTo(0, -(r - 50));
+	ctx.lineTo(0, -(r - 60));
  	ctx.strokeStyle = '#444';
  	ctx.stroke();
  	ctx.restore();
@@ -76,7 +88,7 @@ var drawSecond = function(second) {
 	ctx.lineWidth = 3;
 	ctx.lineCap = 'round';
 	ctx.moveTo(0, 10);
-	ctx.lineTo(0, -(r - 40));
+	ctx.lineTo(0, -(r - 50));
  	ctx.strokeStyle = '#ff0000';
  	ctx.stroke();
  	ctx.restore();
