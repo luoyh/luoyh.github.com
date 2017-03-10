@@ -14,19 +14,15 @@
   <meta name="description" content="My resume">
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="./javascripts/vue.js"></script>
+  <script src="./javascripts/vue-router.js"></script>
 
 </head>
 
 <body>
-
-
-    <div class="man">
-      <canvas id="canvas" width="300" height="300"></canvas>
-
-    </div>
-
-
-  
+<div>
+	WHO AM I?
+</div>	
 </body>
   <script type="text/javascript" src="javascripts/main.js"></script>
 </html>
