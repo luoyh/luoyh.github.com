@@ -12,7 +12,7 @@ var
 
 var drawArc = function() {
 	ctx.beginPath();
-	ctx.strokeStyle = randColor();
+	ctx.strokeStyle = '#555';
 
 	ctx.translate(r, r);
 
@@ -42,9 +42,9 @@ var drawArc = function() {
 	 	ctx.beginPath();
 		ctx.arc(x, y, 3, 0, 2 * Math.PI);
 	 	if(i % 5 === 0) {
-	 		ctx.fillStyle = randColor();
+	 		ctx.fillStyle = '#333';
 	 	} else {
-	 		ctx.fillStyle = randColor();
+	 		ctx.fillStyle = '#aaa';
 	 	}
 	 	ctx.fill();
 	}
@@ -58,7 +58,7 @@ var drawHour = function(hour, minute) {
 	ctx.lineCap = 'round';
 	ctx.moveTo(0, 10);
 	ctx.lineTo(0, -(r - 80));
- 	ctx.strokeStyle = randColor();
+ 	ctx.strokeStyle = '#000';
  	ctx.stroke();
  	ctx.restore();
 };
@@ -74,7 +74,7 @@ var drawMinute = function(minute) {
 	ctx.lineCap = 'round';
 	ctx.moveTo(0, 10);
 	ctx.lineTo(0, -(r - 60));
- 	ctx.strokeStyle = randColor();
+ 	ctx.strokeStyle = '#444';
  	ctx.stroke();
  	ctx.restore();
 };
@@ -89,14 +89,11 @@ var drawSecond = function(second) {
 	ctx.lineCap = 'round';
 	ctx.moveTo(0, 10);
 	ctx.lineTo(0, -(r - 50));
- 	ctx.strokeStyle = randColor();
+ 	ctx.strokeStyle = '#ff0000';
  	ctx.stroke();
  	ctx.restore();
 };
 
-var randColor = function() {
-	return '#' + ((~~(Math.random() * 0xffffff)) | 0x800000).toString(16);
-};
 
 var draw = function() {
 	var now = new Date();
@@ -108,7 +105,7 @@ var draw = function() {
 	drawSecond(now.getSeconds());
 
 	ctx.beginPath();
-	ctx.fillStyle = randColor();
+	ctx.fillStyle = '#fff';
 	ctx.arc(0, 0, 5, 0, 2 * Math.PI);
 	ctx.fill();
 	ctx.restore();
