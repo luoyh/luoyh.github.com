@@ -1,12 +1,43 @@
 
 
 body {
-	background: #ccc;
+   background: url('../images/bg_01.jpg');
+}
+
+.left {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 50%;
+	background: #333;
+}
+
+
+.right {
+	position: fixed;
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: #333;
+}
+
+.load {
+}
+
+.load canvas {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -100px;
 }
 
 .man {
 	width:  300px;
 	height: 300px;
-	margin: 100px auto;
+	margin: 50px auto;
+	display: none;
 }
 

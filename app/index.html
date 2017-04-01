@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular 2 Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- IE required polyfills, in this exact order -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>
+    <script src="https://unpkg.com/systemjs@0.19.4/dist/system-polyfills.js"></script>
+    <script src="https://unpkg.com/angular2@2.0.0-beta.10/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script src="https://unpkg.com/angular2@2.0.0-beta.10/bundles/angular2-polyfills.min.js"></script>
+    <script src="https://unpkg.com/systemjs@0.19.4/dist/system.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/2.2.1/typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.10/Rx.min.js"></script>
+    <script src="https://unpkg.com/angular2@2.0.0-beta.10/bundles/angular2.dev.js"></script>
+    <script>
+      System.config({
+        transpiler: 'typescript', 
+        typescriptOptions: { emitDecoratorMetadata: true }, 
+        packages: {'app': {defaultExtension: 'js'}} 
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+  </head>
+
+  <body>
+    <app>Loading...</app>
+  </body>
+
+</html>
